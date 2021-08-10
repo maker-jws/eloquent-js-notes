@@ -42,4 +42,32 @@ an 8 bit value stores 8 00000000 each representing a base 2 value (2^0, 2^1, ...
 - Infinity & -Infinity (capitalized) > not mathematically accurate
 
 -- Strings
+- Almost any value can be converted to a string by wrapping them in ('', "", or ``)
+- wrapping a line break \n requires ``
+- a '\' can precede any special character and it will be included in your string example "'\\n'"
+
+- `${}` - template literal can allow for the injection of evaluated/invoked values
+- Unary vs Binary operators
+  - unary: only requires one value (ex: typeof or - as in -8 or !false )
+  - binary: an operator that separates two values (3+5)*-1
+  - ternary: a conditional operator that is used for determining a value based on conditional
+
+-- Comparisons
+
+- comparing strings : 'Z' < "a" && "!" < "A"
+- the only value that does not equal itself == NaN
+- ternary: !someConditional ? truthyValue : falsey/default value
+
+-- Automatic Type Conversion
+- type coercion ":When an operator is applied to the “wrong” type of value, JavaScript will quietly convert that value to the type it needs, using a set of rules that often aren’t what you want or expect"
+
+- Ex:
+    - "8* null" >> 0
+    - "5"-1 >> 4 && "5"+1 >> "51"
+    - "five"*2 >> NaN
+    - false == 0 >> true
+
+- if you want to compare to a precise boolean/value using === or !== will prevent type conversion
+- short-circuit evaluation: if you want to skip a secondary evaluation someFalsyValue && X, in this case if (someFalsyValue == false ), X is skipped all together
+-
 */
