@@ -23,3 +23,5 @@ while (count <= 10 ){
 // Instruction: output "total"
 console.log(total)
 // output 55
+
+
