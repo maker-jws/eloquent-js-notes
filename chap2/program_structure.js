@@ -28,6 +28,8 @@ how bindings were made pre 2015
 
 /* CONTROL FLOW 
 ======================
-
+// continue -  will stop the current iteration and continue with the next
+// break - will exit the loop process completely given some condition 
+// either can be condition locked
 
 */

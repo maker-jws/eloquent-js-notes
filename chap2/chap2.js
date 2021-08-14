@@ -92,11 +92,13 @@ function testBreakStatement(){
         console.log(i, counter)
         if (i%7==0){
             console.log("exit")
-            break;
+            break; 
+            // break will 'break' the loop process completely given some condition
         }
         
         if( i%3==0){
             continue;
+            // continue will stop the current iteration and continue with the next 
         }
         counter++
     }
