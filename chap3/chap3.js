@@ -21,9 +21,9 @@ const power2 = function (base, exponent){
     return base ** exponent
 }
 
-const test1 =power(2,10), test2=power2(2,10)
-console.log(test1,test2)
-console.log(power(2,10)===power2(2,10))
+const test1Power =power(2,10), test2Power=power2(2,10)
+// console.log(test1Power,test2Power)
+// console.log(power(2,10)===power2(2,10))
 
 // Another stab at VAR and scope
 
@@ -45,7 +45,7 @@ function testScope(){
     // note: no major diff between var / let in block scope behavior
     console.log(a+b+c)
 }
-testScope()
+// testScope()
 // console.log(c)
 // console.log(a+c)
 
@@ -73,6 +73,46 @@ const hummus = function(factor = 1){
     menu = {_0: "test1"}
     console.log(menu, "inside")
 }
-console.log(menu, "global menu call")
+// console.log(menu, "global menu call")
 hummus(1.25)
-console.log(menu, "global after")
+// console.log(menu, "global after")
+
+
+
+function multiplier (factor) {
+    return (number, current)=> number*factor*(current || 1)
+}
+let twice = multiplier(2)
+//multiple takes one argument, the factor, however it can return a multiplier for previous values if the returned value is passed additional arguments 
+let test = twice(3)
+// console.log(test)
+test = twice(6)
+// console.log(test)
+let count = 0;
+const recursivePower = (base, exponent)=>{
+
+    if(exponent === 0){
+        console.log('base', exponent, count)
+        // base case - some condition that will break the recursion calls
+        return 1 
+    } else {
+        count++
+        console.log('recurse', exponent, count)
+        return base * recursivePower(base, exponent -1)
+    }
+}
+
+console.log(recursivePower(2,10))
+// 10 () > 9 () > 8 () > 7 () > 6() > 5()>4()>3()>2()>1()>0 
+//                                                      2* 1
+//                                                  2* 2 
+//                                             2 *4
+//                                         2*8 
+//                                    2*16
+//                               2*32
+//                        2*64
+//                  2*128
+//          2*256
+// 2*512 
+
+

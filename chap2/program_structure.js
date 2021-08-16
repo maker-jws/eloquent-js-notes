@@ -10,7 +10,7 @@ bindings + expressions: once a binding (variable) has been declared it may be us
   - let statement can be used to bind multiple values ( let one = 1, two = 2)
   - const is a binding that points to a value as long as the binding remains (immutable)
   - let , var, and const are special keywords and may not be used as names for bindings
-
+  
 environment - the collection of bindings and their values at a given time
 
 functions - common in the default environment of the language, a piece of program wrapped in a value
